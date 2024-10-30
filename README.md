@@ -1,8 +1,9 @@
 # YOLO Vehicle Detection on KITTI Dataset
 
-Hey there! This project is all about using the YOLO (You Only Look Once) model to detect vehicles in images and videos from the KITTI dataset.
-**
-What’s Going On?**
+This project is all about using the YOLO (You Only Look Once) v8 model to detect vehicles in images and videos from the KITTI dataset.
+
+The exact dataset can be found at - https://www.kaggle.com/datasets/namanraiyani/kitti-vehicle-dataset
+
 Setup: We start by importing some handy libraries like NumPy, Pandas, and Ultralytics YOLO. These help us with data handling and model training.
 
 Dataset Paths: We define where our training and validation data is located and list the vehicle types we want to detect ('Cyclist', 'Truck', 'Car', 'DontCare', 'Misc', 'Pedestrian', 'Tram', 'Van', 'Person_sitting').
