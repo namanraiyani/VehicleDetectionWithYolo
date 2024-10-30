@@ -1,4 +1,4 @@
-#YOLO Vehicle Detection on KITTI Dataset
+# YOLO Vehicle Detection on KITTI Dataset
 
 Hey there! This project is all about using the YOLO (You Only Look Once) model to detect vehicles in images and videos from the KITTI dataset.
 **
