@@ -14,6 +14,29 @@ Training the Model: We initialize the YOLOv8 model and train it using our datase
 
 Making Predictions: After training, we can use the model to detect vehicles in new images or videos. The results are saved automatically.
 
-![image](https://github.com/user-attachments/assets/4f80f98a-631d-456b-a23f-fc2a9804decb)
+The script liveDetection.py processes a video file (e.g., `test2.mp4`) in real-time using **OpenCV**'s
+`cv2.VideoCapture()` function. The video is read frame by frame, and object detection and tracking
+occur in each frame as follows:
+1. Video Input: The video is opened using `cv2.VideoCapture('test2.mp4')`, which loads the
+video file for processing. Each frame is read sequentially inside the `while cap.isOpened()` loop.
+2. Object Detection: In each frame, YOLO (`model.track(frame)`) detects objects. The model
+predicts the location and class of each object, returning bounding boxes, IDs, and class labels.
+3. Real-Time Processing: For each detected object, a bounding box is drawn on the frame, and
+the object is tracked across frames using a unique ID. This tracking data is stored and updated in
+realtime.
+4. FPS Calculation: The script tracks the frames per second (FPS) to measure performance,
+ensuring that processing speed is displayed on the video feed.
+5. Visualization: The processed frame, with bounding boxes, object IDs, labels, smooth paths,
+and FPS display, is shown in a window using `cv2.imshow()`. This allows the user to see the detection
+and tracking results in real-time as the video plays.
+6. Exit Mechanism: The video feed continues playing until the user presses the 'q' key, which
+breaks the loop and terminates the program.
+This workflow allows for **live object detection and tracking** on a pre-recorded video, simulating a
+real-time system by processing each frame as it's read from the file.
 
-![000013](https://github.com/user-attachments/assets/934ec252-c37a-4c20-80cf-daf7064ffdf0)
+![image](https://github.com/user-attachments/assets/36b1a640-6667-4622-8cef-0791f4ed889f)
+
+![image](https://github.com/user-attachments/assets/d698c088-31e1-49db-9e0f-4519dc34c4bc)
+
+
+
